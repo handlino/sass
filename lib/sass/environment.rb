@@ -99,6 +99,10 @@ module Sass
       @parent_options ||= @parent && @parent.options
     end
 
+    if ::Sass::Util::macruby?
+      UNDERSCORE, DASH = '_', '-'
+    end
+
     class << self
       private
       UNDERSCORE, DASH = '_', '-'
