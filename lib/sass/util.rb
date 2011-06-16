@@ -387,6 +387,13 @@ module Sass
       RUBY_ENGINE == "ironruby"
     end
 
+    # Whether or not this is running on MacRuby
+    #
+    # @return [Boolean]
+    def macruby?
+      RUBY_ENGINE == "macruby"
+    end
+
     ## Cross-Ruby-Version Compatibility
 
     # Whether or not this is running under Ruby 1.8 or lower.
